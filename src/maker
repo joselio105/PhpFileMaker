@@ -1,0 +1,17 @@
+#!/bin/php
+<?php
+
+require_once './vendor/autoload.php';
+
+use Plugse\Maker\Maker;
+
+$fileType = $argv[1];
+$fileName = $argv[2];
+
+try {
+    $maker = new Maker($argv);
+    echo $maker->createFile();
+
+} catch (\Throwable $th) {
+    echo $th->getMessage();
+}

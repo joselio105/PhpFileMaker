@@ -15,12 +15,13 @@ class Maker
         var_dump($this->input->namespace);
     }
 
-    public function createFile(): void
+    public function createFile(): string
     {
         $content = $this->getContent();
         $filename = $this->input->filePath . $this->input->fileName . '.php';
 
         File::saveFile($filename, $content);
+        return "O arquivo '{$filename}' foi criado com sucesso";
     }
 
     private function getContent(): string
