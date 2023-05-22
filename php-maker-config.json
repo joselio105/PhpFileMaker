@@ -1,0 +1,12 @@
+{
+    "namespace": "Plugse\\Maker\\",
+    "srcDir": "src\/",
+    "commands": [
+        "class",
+        "controller",
+        "empty",
+        "interface",
+        "test",
+        "trait"
+    ]
+}
