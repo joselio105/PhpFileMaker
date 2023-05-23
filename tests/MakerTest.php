@@ -11,13 +11,6 @@ class MakerTest extends TestCase
 {
     private static $files;
 
-    protected function tearDown(): void
-    {
-        foreach (self::$files as $file) {
-            unlink($file);
-        }
-    }
-
     public function testCreateFile()
     {
         $commands = [
@@ -29,12 +22,13 @@ class MakerTest extends TestCase
             'trait'
         ];
 
-        foreach ($commands as $key => $command) {
-            self::$files[$key] = "./tests/files/{$command}.php";
-            $maker = new Maker([$command, self::$files[$key]]);
+        foreach ($commands as $command) {
+            $file = "./tests/files/{$command}.php";
+            $maker = new Maker([$command, $file]);
             $maker->createFile();
 
-            $this->assertFileExists(self::$files[$key]);
+            $this->assertFileExists($file);
+            unlink($file);
         }
     }
 

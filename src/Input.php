@@ -63,12 +63,8 @@ class Input
         if (!key_exists(0, $args)) {
             throw new Exception("Erro: Faltou definir o tipo de arquivo a ser criado");
         }
-        var_dump(
-            $args[0],
-            $this->config['commands'],
-            in_array($args[0], array_keys($this->config['commands']))
-        );
-        if (in_array($args[0], array_keys($this->config['commands']))) {
+
+        if (in_array($args[0], $this->config['commands'])) {
             $this->command = $args[0];
         } else {
             $this->command = 'empty';

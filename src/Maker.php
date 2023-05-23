@@ -31,7 +31,6 @@ class Maker
     {
         $filePath = __DIR__ . '/templates/';
         $fileName = $this->input->command . '.txt';
-        var_dump($fileName);
         $content = File::readFile($filePath . $fileName);
         $content = str_replace(
             ['%%NAMESPACE%%', '%%NAME%%'],

@@ -19,7 +19,7 @@ class InputTest extends TestCase
     {
         $commands = [
             'class',
-            'conntroller',
+            'controller',
             'empty',
             'interface',
             'test',
