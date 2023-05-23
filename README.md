@@ -1,9 +1,8 @@
 # File and Path
 
-![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/joselio105/fileandpath?include_prereleases)
-![GitHub](https://img.shields.io/github/license/joselio105/FileAndPath)
+![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/joselio105/phpfilemaker?include_prereleases)
+![GitHub](https://img.shields.io/github/license/joselio105/phpfilemaker)
 ![PHP](https://img.shields.io/badge/PHP-7.4.33-blue)
-![PHP Unit](https://img.shields.io/badge/depencencies-PHPUnit9.6-yellowgreen)
 
 Criando um novo arquivo PHP com somente um comando
 
